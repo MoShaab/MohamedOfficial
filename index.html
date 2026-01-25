@@ -246,7 +246,7 @@
             </div>
             
             <div class="contact-right">
-                <form name ="submit-to-google-sheet">
+                <form name ="contact-form">
                     <input type="text" name ="Name" placeholder ="Your name" required>
                     <input type="email" name  = "Email" placeholder = "Your email" required>
                     <textarea name="Message"  rows="6" placeholder="Your message"></textarea>
@@ -291,7 +291,7 @@ function opentab(tabname){
     }
  </script>
 
-<script>
+<!-- <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwnsM2EdgUzOwq--qv-933VY077Ft3Vx89Vt_WbYXnZcLzbiTLuxpU3HAk_f6QPgJXB/exec'
     const form = document.forms['submit-to-google-sheet']
     const msg= document.getElementById("msg")
@@ -307,7 +307,10 @@ function opentab(tabname){
         })
         .catch(error => console.error('Error!', error.message))
     })
-  </script>
-                
+  </script> -->
+                                    <!-- Odoo Contact Form Integration -->
+<script src="http://localhost:8068/website_crm_webhook/static/src/js/odoo_contact_widget.js" 
+        data-odoo-webhook="http://localhost:8068/webhook/contact?db=18"
+        data-auto-detect="true"></script>
 </body>
 </html>
