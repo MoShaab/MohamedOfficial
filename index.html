@@ -1,320 +1,685 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed-Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/9a6f1c462d.js" crossorigin="anonymous"></script>
-</head>
-<body>
-<div id="header">
-<div class="container">
-    <div class="navbar">
-    <nav>
-        <img src="images/logo.png" class="logo">
-        <ul id = "sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Sevices</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohamed Abdirizak Hassan · Data Engineer &amp; Builder</title>
+    <meta
+      name="description"
+      content="Mohamed Abdirizak Hassan is a data engineer and builder from Dadaab, Kenya, and the creator of Suuqbile, HiilDhaxal and KilimoVision."
+    />
+    <meta name="author" content="Mohamed Abdirizak Hassan" />
+    <meta name="theme-color" content="#f7f6f2" />
+    <link rel="canonical" href="https://mohamedshofficial.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mohamedshofficial.vercel.app/" />
+    <meta property="og:title" content="Mohamed Abdirizak Hassan · Data Engineer &amp; Builder" />
+    <meta
+      property="og:description"
+      content="Data pipelines, business software for East African shops, a digital museum of Somali heritage, and offline AI for farmers."
+    />
+    <link rel="icon" href="images/favicon.ico" />
+
+    <!-- Apply the saved or system theme before first paint to avoid a flash -->
+    <script>
+      (function () {
+        var theme = null;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (e) {}
+        if (theme !== "light" && theme !== "dark") {
+          theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.classList.add("js");
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mohamed Abdirizak Hassan",
+        "jobTitle": "Data Engineer",
+        "email": "mailto:mohamed.hassanciiro@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Dadaab", "addressCountry": "KE" },
+        "alumniOf": "University of Nairobi",
+        "sameAs": ["https://github.com/MoShaab", "https://www.linkedin.com/in/mohamed-hiildhaxal/", "https://x.com/EngMohamedAH"]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+
+    <header class="nav" id="nav">
+      <div class="container nav__inner">
+        <a class="brand" href="#top" aria-label="Mohamed Abdirizak Hassan, back to top">MH<span>.</span></a>
+        <nav aria-label="Primary">
+          <ul class="nav__links" id="nav-links">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
-            <i class="fa-solid fa-x" onclick="closemenu()"></i>
-        </ul>
-        <i class="fa-solid fa-bars" onclick = "openmenu()"></i>
-    </nav>
-  </div>
-    
-    <div class="header-text">
-        <p>Software Engineer</p>
-        <h1>Hi, I'm <span >Mohamed</span> Hassan</h1>
-    </div>
-</div>
-</div>
-<!-- *****************About******************* -->
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/user.jpg">
-            </div>
-            <div class="about-col-2">
-                <h1 class = "sub-title">About Me</h1>
-                <p>
-
-                </p>
-                <div class="tab-titles">
-                    <p class = "tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class = "tab-links" onclick="opentab('education')">Education</p>
-                </div>
-                <div class="tab-contents active-tab" id ="skills">
-                    <ul>
-                        <li><span>Web Development</span><br>Web app development</li>
-                        <li><span>App Develoment</span><br>Building Android/iOS apps</li>
-                        <li><span>AI Systems Development</span><br>Creating intelligent software systems</li>
-                    </ul>
-                   
-                </div>
-
-              
-
-
-    
-               
-                <div class="tab-contents" id = "education">
-                    <ul>
-                        <li><span>02/2024-06/2024</span><br>PLP Software Development program</li>
-                        <li><span>09/2021-09/2025</span><br>Bsc. Computer Science at University of Nairobi</li>
-                        <li><span>2021-2023</span><br>Programming at Udemy</li>
-                    </ul>
-                </div>
-            </div>
-            
+          </ul>
+        </nav>
+        <div class="nav__actions">
+          <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+            <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
+            <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+            </svg>
+          </button>
+          <button
+            class="icon-btn nav__menu"
+            id="menu-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="nav-links"
+          >
+            <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+          </button>
         </div>
-            <div class="skillset">
-                <h4>Programming Languages and Tools</h4>
-            </div>
+      </div>
+    </header>
 
-        <div class="langauges">
-            <figure>
-                <img src="images/js.png" alt="Javascript" >
-                <figcaption>Javascript</figcaption>
-            </figure>
-            <figure>
-                <img src="images/reactjs.png" alt="React js logo">
-                <figcaption>React JS</figcaption>
-            </figure>
-                
-            <figure>
-                <img src="images/nodejs.png" alt="Node js logo">
-                <figcaption>Node JS</figcaption>
-            </figure>
-                
-            <figure>
-                <img src="images/express.png" alt="Express logo">
-                <figcaption>Express</figcaption>
-            </figure>
-            <figure>
-                <img src="images/mongo.png" alt="Mongo db logo">
-                <figcaption>Mongo db</figcaption>
-            </figure>
-            <figure>
-                <img src="images/flutter.png" alt="Flutter logo">
-                <figcaption>Flutter</figcaption>
-            </figure>
-            <figure>
-                <img src="images/mysql.jpg" alt="Mysql logo">
-                <figcaption>MySQL</figcaption>
-            </figure>
-            <figure>
-                <img src="images/python.png" alt="Python logo">
-                <figcaption>Python</figcaption>
-            </figure>
-            <figure>
-                <img src="images/tensor.png" alt="Tensor logo">
-                <figcaption>Tensor</figcaption>
-            </figure>
-            <figure>
-                <img src="images/dialogflow.png" alt="Dialogflow logo">
-                <figcaption>Dialogflow</figcaption>
-            </figure>
-            <figure>
-                <img src="images/matlab.png" alt="Matlab logo">
-                <figcaption>Matlab</figcaption>
-            </figure>
-            <figure>
-                <img src="images/php.png" alt="Php logo">
-                <figcaption>PHP</figcaption>
-            </figure>
-            <figure>
-                <img src="images/c.png" alt="C Prog. Language logo">
-                <figcaption>C Programming Language</figcaption>
-            </figure>
-            <div class="more">
-                <img src="images/more.png" alt="">
-            </div>
-               
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero" id="top">
+        <div class="hero__bg" aria-hidden="true">
+          <span class="blob blob--1"></span>
+          <span class="blob blob--2"></span>
+          <span class="blob blob--3"></span>
+          <span class="hero__grid"></span>
         </div>
-       
-           
-    </div>
-</div>
 
-<!-- ****************Services*************** -->
+        <div class="container hero__inner">
+          <div class="hero__text">
+            <p class="status" style="--d: 0">
+              <span class="status__dot" aria-hidden="true"></span>
+              Business Development Advisor at Inkomoko
+            </p>
+            <h1 class="hero__title" style="--d: 1">Mohamed<br />Abdirizak Hassan</h1>
+            <p class="hero__role" style="--d: 2">
+              <span class="sr-only">
+                Data engineer building data pipelines, business software for East African shops, a digital home for
+                Somali heritage, and edge AI for farmers.
+              </span>
+              <span aria-hidden="true">
+                Data engineer building
+                <span
+                  class="rotator"
+                  data-phrases="data pipelines that don't break.|business software for East African shops.|a digital home for Somali heritage.|edge AI for smallholder farmers."
+                  >data pipelines that don't break.</span
+                >
+              </span>
+            </p>
+            <p class="hero__lead" style="--d: 3">
+              I design data pipelines, databases and backends, and use them to build products for East Africa. I
+              graduated with First-Class Honours in Computer Science from the University of Nairobi and work from
+              Dadaab, Kenya.
+            </p>
+            <div class="hero__cta" style="--d: 4">
+              <a class="btn btn--primary" href="#work">
+                See my work
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14" /><path d="m19 12-7 7-7-7" /></svg>
+              </a>
+              <a class="btn btn--ghost" href="images/Mohamed-Abdirizak-Hassan-CV.pdf" download>
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12" /><path d="m7 10 5 5 5-5" /><path d="M5 21h14" /></svg>
+                Download CV
+              </a>
+            </div>
+            <ul class="socials" style="--d: 5" aria-label="Profiles">
+              <li>
+                <a href="https://github.com/MoShaab" target="_blank" rel="noopener" aria-label="GitHub profile">
+                  <svg class="icon icon--fill" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/mohamed-hiildhaxal/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+                  <svg class="icon icon--fill" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://x.com/EngMohamedAH" target="_blank" rel="noopener" aria-label="X (Twitter) profile">
+                  <svg class="icon icon--fill" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23Zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64Z" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:mohamed.hassanciiro@gmail.com" aria-label="Send me an email">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
+                </a>
+              </li>
+              <li class="socials__place">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11Z" /><circle cx="12" cy="10" r="2.5" /></svg>
+                Dadaab, Kenya
+              </li>
+            </ul>
+          </div>
 
-<div id="services">
-    <div class="container">
-        <h1 class="subtitle">My Services</h1>
-        <div class="services list">
+          <div class="hero__visual" aria-hidden="true">
+            <div class="avatar">
+              <span class="avatar__ring"></span>
+              <img class="avatar__face" src="images/profile.jpg" alt="" width="600" height="660" fetchpriority="high" />
+            </div>
+            <span class="orbit-chip" style="--x: -8%; --y: 12%; --delay: 0s">Python</span>
+            <span class="orbit-chip" style="--x: 72%; --y: 4%; --delay: -1.5s">PostgreSQL</span>
+            <span class="orbit-chip" style="--x: 80%; --y: 78%; --delay: -3s">Edge AI</span>
+            <span class="orbit-chip" style="--x: -4%; --y: 82%; --delay: -4.5s">Odoo</span>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#highlights" aria-label="Scroll to highlights"><span></span></a>
+      </section>
+
+      <!-- Highlights -->
+      <section class="container stats" id="highlights" aria-label="Highlights">
+        <div class="stat glow reveal" style="--i: 0">
+          <p class="stat__num"><span data-count="2">2</span>+</p>
+          <p class="stat__label">years of data &amp; backend engineering</p>
+        </div>
+        <div class="stat glow reveal" style="--i: 1">
+          <p class="stat__num"><span data-count="3">3</span></p>
+          <p class="stat__label">products built and launched</p>
+        </div>
+        <div class="stat glow reveal" style="--i: 2">
+          <p class="stat__num"><span data-count="4">4</span></p>
+          <p class="stat__label">engineers led &amp; mentored</p>
+        </div>
+        <div class="stat glow reveal" style="--i: 3">
+          <p class="stat__num"><span data-count="25">25</span>%</p>
+          <p class="stat__label">faster API responses at Skill Up</p>
+        </div>
+      </section>
+
+      <!-- Work -->
+      <section class="section" id="work">
+        <div class="container">
+          <header class="section__head reveal">
+            <p class="eyebrow">Selected work</p>
+            <h2>Products I've built</h2>
+            <p class="section__intro">
+              Each one is software for real people in East Africa: shop owners, farmers, and everyone who loves Somali
+              culture.
+            </p>
+          </header>
+
+          <!-- Suuqbile -->
+          <article class="project reveal">
+            <div class="project__visual visual-suuqbile" data-tilt aria-hidden="true">
+              <div class="phone">
+                <div class="phone__notch"></div>
+                <p class="phone__label">Today's profit</p>
+                <p class="phone__value">KES 4,820</p>
+                <p class="phone__delta">↑ 12% vs yesterday</p>
+                <div class="bars">
+                  <span style="--h: 40%; --i: 0"></span>
+                  <span style="--h: 62%; --i: 1"></span>
+                  <span style="--h: 48%; --i: 2"></span>
+                  <span style="--h: 75%; --i: 3"></span>
+                  <span style="--h: 58%; --i: 4"></span>
+                  <span style="--h: 88%; --i: 5"></span>
+                  <span style="--h: 70%; --i: 6"></span>
+                </div>
+                <div class="phone__row"><span>Stock alerts</span><b>3 low</b></div>
+                <div class="phone__row"><span>Credit owed</span><b>KES 12,400</b></div>
+              </div>
+              <div class="float-card float-card--a">
+                <span class="float-card__dot"></span>
+                Sale recorded · 2 taps
+              </div>
+              <div class="float-card float-card--b">
+                <span class="lang">EN</span><span class="lang">SO</span><span class="lang">SW</span>
+              </div>
+            </div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span class="badge">Built &amp; launched</span>
+                <span class="badge badge--live"><span class="live-dot"></span>Live</span>
+              </div>
+              <h3 class="project__title">Suuqbile</h3>
+              <p class="project__tagline">Run your whole shop from your phone.</p>
+              <p>
+                An affordable business system for East African shops and growing businesses. Owners can sell, track
+                stock, manage customer credit and invoices, and see their daily profit from any phone. It works in
+                English, Somali or Swahili and starts at <strong>KES 1,999 a year</strong>.
+              </p>
+              <ul class="tags">
+                <li>Point of sale</li>
+                <li>Inventory</li>
+                <li>Customer credit</li>
+                <li>Invoicing</li>
+                <li>Multilingual</li>
+              </ul>
+              <a class="link-arrow" href="https://suuqbile.com" target="_blank" rel="noopener">
+                Visit suuqbile.com
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7" /><path d="M8 7h9v9" /></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- HiilDhaxal -->
+          <article class="project project--reverse reveal">
+            <div class="project__visual visual-hiil" data-tilt aria-hidden="true">
+              <div class="hiil__head">
+                <p class="hiil__brand">HIIL<span>Dhaxal</span></p>
+                <p class="hiil__sub">Hoyga Hiddaha Soomaaliyeed</p>
+              </div>
+              <div class="player">
+                <span class="player__btn"></span>
+                <div class="player__info">
+                  <p class="player__title">Gabayga Guba · Qaybta 13aad</p>
+                  <p class="player__artist">Salaan Carrabey</p>
+                </div>
+              </div>
+              <div class="wave">
+                <span style="--i: 0"></span><span style="--i: 1"></span><span style="--i: 2"></span><span style="--i: 3"></span>
+                <span style="--i: 4"></span><span style="--i: 5"></span><span style="--i: 6"></span><span style="--i: 7"></span>
+                <span style="--i: 8"></span><span style="--i: 9"></span><span style="--i: 10"></span><span style="--i: 11"></span>
+                <span style="--i: 12"></span><span style="--i: 13"></span><span style="--i: 14"></span><span style="--i: 15"></span>
+                <span style="--i: 16"></span><span style="--i: 17"></span><span style="--i: 18"></span><span style="--i: 19"></span>
+                <span style="--i: 20"></span><span style="--i: 21"></span><span style="--i: 22"></span><span style="--i: 23"></span>
+              </div>
+              <div class="hiil__chips">
+                <span>Gabay</span><span>Heeso</span><span>Farshaxan</span><span>Taariikh</span>
+              </div>
+            </div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span class="badge">Founder</span>
+                <span class="badge badge--live"><span class="live-dot"></span>Live</span>
+              </div>
+              <h3 class="project__title">HiilDhaxal</h3>
+              <p class="project__tagline">A digital museum of Somali heritage.</p>
+              <p>
+                Watch, listen to and explore Somali poetry, music, art and history, and learn about the people and
+                places behind them. The archive covers everything from the classic poetry chain <em>Guba</em> to the
+                rock art of Laas Geel, and it's available in eight languages.
+              </p>
+              <ul class="tags">
+                <li>Digital archive</li>
+                <li>Video &amp; audio</li>
+                <li>8 languages</li>
+                <li>Cultural preservation</li>
+              </ul>
+              <a class="link-arrow" href="https://www.hiildhaxal.online" target="_blank" rel="noopener">
+                Visit hiildhaxal.online
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7" /><path d="M8 7h9v9" /></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- KilimoVision -->
+          <article class="project reveal">
+            <div class="project__visual visual-kilimo" data-tilt aria-hidden="true">
+              <div class="viewfinder">
+                <span class="corner corner--tl"></span><span class="corner corner--tr"></span>
+                <span class="corner corner--bl"></span><span class="corner corner--br"></span>
+                <svg class="leaf" viewBox="0 0 200 200">
+                  <defs>
+                    <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#86efac" />
+                      <stop offset="1" stop-color="#15803d" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M100 18C152 38 178 92 160 142c-11 30-38 44-60 44s-49-14-60-44C22 92 48 38 100 18Z" fill="url(#leafGrad)" />
+                  <path d="M100 30v150M100 70l-34-18M100 70l34-18M100 105l-42-20M100 105l42-20M100 140l-34-16M100 140l34-16" stroke="#14532d" stroke-opacity=".45" stroke-width="2" fill="none" stroke-linecap="round" />
+                  <circle cx="128" cy="96" r="8" fill="#92400e" fill-opacity=".85" />
+                  <circle cx="137" cy="110" r="5" fill="#78350f" fill-opacity=".8" />
+                  <circle cx="120" cy="114" r="4" fill="#92400e" fill-opacity=".75" />
+                  <rect class="detect-box" x="108" y="82" width="40" height="42" rx="4" />
+                  <g class="detect-label">
+                    <rect x="108" y="66" width="76" height="14" rx="3" />
+                    <text x="112" y="76.5">Leaf blight · 94%</text>
+                  </g>
+                </svg>
+                <span class="scanline"></span>
+              </div>
+              <div class="float-card float-card--a">
+                <span class="float-card__dot"></span>
+                Offline · on-device
+              </div>
+              <div class="float-card float-card--b">MobileNetV2</div>
+            </div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span class="badge">Built · Edge AI</span>
+              </div>
+              <h3 class="project__title">KilimoVision</h3>
+              <p class="project__tagline">Crop disease detection that works without the internet.</p>
+              <p>
+                A mobile app that uses edge computing to detect crop diseases in real time, directly on the phone. I
+                trained a MobileNetV2-based CNN and made it small enough to run on the device. A farmer photographs a
+                leaf and gets a diagnosis in the field, with no internet connection needed.
+              </p>
+              <p>
+                <strong>KilimoVision CBO</strong> is the agriculture-focused technology initiative that grew alongside
+                the app.
+              </p>
+              <ul class="tags">
+                <li>TensorFlow</li>
+                <li>MobileNetV2</li>
+                <li>Kotlin</li>
+                <li>Jetpack Compose</li>
+                <li>Firebase</li>
+                <li>Cloudflare R2</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Research -->
+          <article class="mini-project glow reveal">
+            <div class="mini-project__icon" aria-hidden="true">
+              <svg viewBox="0 0 120 80">
+                <path class="db-link" d="M30 40 60 18M30 40l30 22M60 18l30 22M60 62l30-22" />
+                <circle cx="30" cy="40" r="9" /><circle cx="60" cy="18" r="9" />
+                <circle cx="60" cy="62" r="9" /><circle cx="90" cy="40" r="9" />
+              </svg>
+            </div>
             <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Web Development</h2>
-                <p>
-                    Have expertise in both frontend and backend development, creating dynamic and responsive websites tailored to your needs.
-                </p>
-                <a href="#contact">Learn more</a>
+              <p class="eyebrow">Research project</p>
+              <h3>Distributed Database System</h3>
+              <p>
+                A distributed database spanning MySQL and PostgreSQL environments, built with vertical and horizontal
+                fragmentation. Python scripts and SQL automate how data is split up, distributed and put back together.
+              </p>
+              <ul class="tags">
+                <li>MySQL</li>
+                <li>PostgreSQL</li>
+                <li>Python</li>
+                <li>Shell</li>
+                <li>Docker</li>
+              </ul>
             </div>
-            <div>
-                <i class="fa-brands fa-app-store"></i>
-                <h2>App Development</h2>
-                <p>
-                    Discover my mobile application development services, providing innovative solutions for various platforms.
-                </p>
-                <a href="#contact">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-robot"></i>
-                <h2>AI Systems Development</h2>
-                <p>
-                    Delve into the world of artificial intelligence with my cutting-edge solutions for intelligent systems.
-                </p>
-                <a href="#contact">Learn more</a>
-            </div>
-        </div>
-        
-            </div>
-        </div>
-    </div>
-</div>
+          </article>
 
-<!-- ****************Portfolio************** -->
-
-<div id="portfolio">
-
-   <div class="container">
-    <h1 class = "subtitle"> My Work</h1>
-    <div class="work-list">
-        <div class="work">
-            <img src="images/work-1.webp" height="390px" width="500px">
-            <div class="layer">
-                <h3>Rental Finder App</h3>
-                <p>Web application that helps tenants find 
-                   rental properties quickly and conveniently.
-                   Check it out!
-                </p>
-                <a href="https://github.com/MoShaab"><i class="fa-solid fa-link"></i></a>
-            </div>
-            
+          <h3 class="subhead reveal">Earlier projects</h3>
+          <div class="earlier-grid">
+            <a class="earlier glow reveal" style="--i: 0" href="https://github.com/MoShaab" target="_blank" rel="noopener">
+              <img src="images/work-1.webp" alt="Rental Finder app screen showing neighbourhood scores" loading="lazy" width="412" height="732" />
+              <span class="earlier__body">
+                <span class="earlier__title">Rental Finder App</span>
+                <span class="earlier__text">A web app that helps tenants find rental properties quickly and conveniently.</span>
+              </span>
+            </a>
+            <a class="earlier glow reveal" style="--i: 1" href="https://github.com/MoShaab/E-Commerce-Platform/tree/master" target="_blank" rel="noopener">
+              <img src="images/work-2.jpg" alt="Laptop showing an online shop with shopping bags beside it" loading="lazy" width="960" height="540" />
+              <span class="earlier__body">
+                <span class="earlier__title">E-Commerce Platform</span>
+                <span class="earlier__text">A one-stop destination for online shopping.</span>
+              </span>
+            </a>
+            <a class="earlier glow reveal" style="--i: 2" href="https://github.com/MoShaab/Next-Gen-Restaurant-Chatbot" target="_blank" rel="noopener">
+              <img src="images/work-3.webp" alt="Chat conversation where a customer orders from a restaurant menu" loading="lazy" width="456" height="423" />
+              <span class="earlier__body">
+                <span class="earlier__title">Restaurant Chatbot</span>
+                <span class="earlier__text">An intelligent agent that takes orders from customers.</span>
+              </span>
+            </a>
+          </div>
         </div>
-        <div class="work">
-            <img src="images/work-2.jpg" height="390px" width="500px">
-            <div class="layer">
-                <h3>E-Commerce Platform</h3>
-                <p>An application that provides users with a one-stop destination
-                    for online shopping.
-                   
-                </p>
-                <a href="https://github.com/MoShaab/E-Commerce-Platform/tree/master"><i class="fa-solid fa-link"></i></a>
-            </div>
-        </div>
-        <div class="work">
-            <img src="images/work-3.webp" height="390px" width="500px">
-            <div class="layer">
-                <h3>Restaurant Chatbot</h3>
-                <p>
-                    This is an intelligent agent that takes orders from customers. 
-                    It is also in the process of learning visual data.
-                </p>
-                <a href="https://github.com/MoShaab/Next-Gen-Restaurant-Chatbot/blob/main/main.py"><i class="fa-solid fa-link"></i></a>
-            </div>
-        </div>
-    </div>
-    
-    <a href="https://github.com/MoShaab" class ="btn">See more</a>
-   </div> 
-</div>
+      </section>
 
-<!-- *****************Contact****************** -->
+      <!-- Experience -->
+      <section class="section section--alt" id="experience">
+        <div class="container">
+          <header class="section__head reveal">
+            <p class="eyebrow">Experience</p>
+            <h2>Where I've worked</h2>
+          </header>
 
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 ca class="subtitle">Get in touch!</h1>
-                <p> <i class="fa-solid fa-paper-plane"></i> mxassanciiro@gmail.com</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/mohamed-hassan-652589236/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://x.com/@EngMohamedAH"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://github.com/MoShaab"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://api.whatsapp.com/send?phone=254729111768"><i class="fa-brands fa-whatsapp"></i></a>
+          <div class="timeline">
+            <span class="timeline__fill" aria-hidden="true"></span>
+            <ol class="timeline__list">
+              <li class="tl-item reveal">
+                <div class="tl-card glow">
+                  <div class="tl-card__head">
+                    <div>
+                      <h3>Business Development Advisor</h3>
+                      <p class="tl-card__org">Inkomoko · Dadaab, Kenya</p>
+                    </div>
+                    <p class="tl-card__date"><span class="now-pill">Now</span> Jun 2026 – Present</p>
+                  </div>
+                  <ul class="tl-card__list">
+                    <li>
+                      Analyse client operational data to judge whether businesses are viable, modelling gross margin,
+                      inventory turnover, unit economics and cash flow.
+                    </li>
+                    <li>
+                      Clean and validate intake surveys and site-visit data into auditable client profiles that feed
+                      credit scoring, due diligence and loan disbursement.
+                    </li>
+                    <li>
+                      Design and deliver data literacy and business management training for entrepreneurs in Somali,
+                      Swahili and English.
+                    </li>
+                    <li>Champion data quality in the field by flagging discrepancies and duplicate records.</li>
+                  </ul>
+                  <ul class="tags">
+                    <li>Data analysis</li>
+                    <li>Financial modelling</li>
+                    <li>Data quality</li>
+                    <li>Training</li>
+                  </ul>
                 </div>
-                <a href="images/Mohamed_CVResume.pdf" download class = "btn btn2">Download CV</a>
-            </div>
-            
-            <div class="contact-right">
-                <form name ="contact-form">
-                    <input type="text" name ="Name" placeholder ="Your name" required>
-                    <input type="email" name  = "Email" placeholder = "Your email" required>
-                    <textarea name="Message"  rows="6" placeholder="Your message"></textarea>
-                    <button type="submit" class = "btn btn2">Submit</button>
+              </li>
 
-                </form>
-                <span id = "msg"></span>
-            </div>
+              <li class="tl-item reveal">
+                <div class="tl-card glow">
+                  <div class="tl-card__head">
+                    <div>
+                      <h3>Data Engineer</h3>
+                      <p class="tl-card__org">KilimoVision · Dadaab, Kenya</p>
+                    </div>
+                    <p class="tl-card__date">Jun 2025 – May 2026</p>
+                  </div>
+                  <ul class="tl-card__list">
+                    <li>Built and maintained custom Odoo backend modules in Python and XML around business workflows.</li>
+                    <li>Designed complex PostgreSQL schemas and indexes for high concurrency.</li>
+                    <li>Integrated Odoo with third-party APIs and external systems for reliable data exchange.</li>
+                    <li>Debugged and hardened the Odoo stack so it stayed reliable.</li>
+                  </ul>
+                  <ul class="tags">
+                    <li>Odoo</li>
+                    <li>Python</li>
+                    <li>PostgreSQL</li>
+                    <li>API integration</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="tl-item reveal">
+                <div class="tl-card glow">
+                  <div class="tl-card__head">
+                    <div>
+                      <h3>Full Stack Engineer</h3>
+                      <p class="tl-card__org">Skill Up Technology · Nairobi, Kenya</p>
+                    </div>
+                    <p class="tl-card__date">Oct 2024 – Apr 2026</p>
+                  </div>
+                  <ul class="tl-card__list">
+                    <li>
+                      Architected secure, idempotent REST API ingestion pipelines in Python and Node.js, with file
+                      storage on AWS S3 and Cloudflare R2.
+                    </li>
+                    <li>
+                      Built chunking and embedding pipelines for RAG chatbots, with validation checks for retrieval
+                      accuracy and source attribution.
+                    </li>
+                    <li>Made API responses <strong>25% faster</strong> with caching, pre-rendering and batching.</li>
+                    <li>Containerised services with Docker and shipped CI/CD to AWS, Vercel and Cloudflare.</li>
+                    <li>Led and mentored a squad of 4 engineers through code reviews and pairing.</li>
+                  </ul>
+                  <ul class="tags">
+                    <li>Python</li>
+                    <li>Node.js</li>
+                    <li>RAG</li>
+                    <li>Docker</li>
+                    <li>CI/CD</li>
+                    <li>AWS</li>
+                  </ul>
+                </div>
+              </li>
+            </ol>
+          </div>
         </div>
-    </div>
+      </section>
 
-    <div class="copyright">
-        <p>&copy; 2024 Mohamed A. Hassan</p>
-    </div>
-</div>
- <script>
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
+      <!-- Skills -->
+      <section class="section" id="skills">
+        <div class="container">
+          <header class="section__head reveal">
+            <p class="eyebrow">Skills</p>
+            <h2>My toolkit</h2>
+          </header>
+        </div>
 
-function opentab(tabname){
-    for (tablink of tablinks){
-        tablink.classList.remove("active-link");
+        <div class="marquee reveal" aria-hidden="true">
+          <div class="marquee__track">
+            <ul>
+              <li>Python</li><li>PostgreSQL</li><li>Docker</li><li>TensorFlow</li><li>Odoo</li><li>dbt</li>
+              <li>AWS S3</li><li>Cloudflare R2</li><li>Node.js</li><li>Kotlin</li><li>Firebase</li><li>MySQL</li>
+              <li>Airflow</li><li>Dagster</li><li>PyTest</li><li>Linux</li>
+            </ul>
+            <ul>
+              <li>Python</li><li>PostgreSQL</li><li>Docker</li><li>TensorFlow</li><li>Odoo</li><li>dbt</li>
+              <li>AWS S3</li><li>Cloudflare R2</li><li>Node.js</li><li>Kotlin</li><li>Firebase</li><li>MySQL</li>
+              <li>Airflow</li><li>Dagster</li><li>PyTest</li><li>Linux</li>
+            </ul>
+          </div>
+        </div>
 
-    }
-    for (tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tab");
-        
-    }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
-}
+        <div class="container skills-grid">
+          <div class="skill-card glow reveal" style="--i: 0">
+            <h3>Languages</h3>
+            <ul class="tags"><li>Python</li><li>SQL</li><li>Bash</li><li>JavaScript / Node.js</li><li>Kotlin</li><li>XML</li></ul>
+          </div>
+          <div class="skill-card glow reveal" style="--i: 1">
+            <h3>Data engineering</h3>
+            <ul class="tags"><li>ETL / ELT design</li><li>Idempotent loads</li><li>Incremental loading</li><li>Schema modelling</li><li>REST API ingestion</li><li>dbt</li><li>Dagster / Airflow</li></ul>
+          </div>
+          <div class="skill-card glow reveal" style="--i: 2">
+            <h3>Databases &amp; storage</h3>
+            <ul class="tags"><li>PostgreSQL tuning &amp; indexing</li><li>MySQL</li><li>MariaDB</li><li>AWS S3</li><li>Cloudflare R2</li><li>Firebase</li></ul>
+          </div>
+          <div class="skill-card glow reveal" style="--i: 3">
+            <h3>Data quality &amp; testing</h3>
+            <ul class="tags"><li>PyTest</li><li>Automated quality gates</li><li>Freshness checks</li><li>Data contracts</li></ul>
+          </div>
+          <div class="skill-card glow reveal" style="--i: 4">
+            <h3>AI &amp; ML</h3>
+            <ul class="tags"><li>TensorFlow</li><li>CNNs</li><li>MobileNetV2</li><li>On-device inference</li><li>RAG pipelines</li><li>Embeddings</li></ul>
+          </div>
+          <div class="skill-card glow reveal" style="--i: 5">
+            <h3>DevOps &amp; platforms</h3>
+            <ul class="tags"><li>Git / GitHub</li><li>Docker</li><li>CI/CD</li><li>Linux</li><li>AWS</li><li>Vercel</li><li>Cloudflare</li><li>Odoo</li></ul>
+          </div>
+          <div class="skill-card skill-card--wide glow reveal" style="--i: 6">
+            <h3>Data governance</h3>
+            <ul class="tags"><li>RBAC</li><li>Anonymisation</li><li>Audit logging</li><li>Humanitarian data protection standards</li></ul>
+          </div>
+        </div>
+      </section>
 
- </script>
- 
- <script>
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu(){
-        sidemenu.style.right="0";
-    }
-    function closemenu(){
-        sidemenu.style.right="-200px";
-    }
- </script>
+      <!-- Education -->
+      <section class="section section--alt" id="education">
+        <div class="container">
+          <header class="section__head reveal">
+            <p class="eyebrow">Education</p>
+            <h2>Education &amp; languages</h2>
+          </header>
 
-<!-- <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwnsM2EdgUzOwq--qv-933VY077Ft3Vx89Vt_WbYXnZcLzbiTLuxpU3HAk_f6QPgJXB/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg= document.getElementById("msg")
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML= "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            }, 1000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script> -->
+          <div class="edu-grid">
+            <div class="edu-card glow reveal">
+              <div class="edu-card__top">
+                <span class="honours">First Class Honours</span>
+                <span class="tl-card__date">Sep 2021 – Sep 2025</span>
+              </div>
+              <h3>BSc Computer Science</h3>
+              <p class="tl-card__org">University of Nairobi</p>
+              <p>
+                <strong>DAFI Scholar</strong>, supported by the Albert Einstein German Academic Refugee Initiative.
+              </p>
+              <p class="edu-card__label">Relevant coursework</p>
+              <ul class="tags">
+                <li>Distributed Databases</li>
+                <li>Business Intelligence &amp; Analytics</li>
+                <li>Data Structures &amp; Algorithms</li>
+                <li>Machine Learning</li>
+                <li>Probability &amp; Statistics</li>
+              </ul>
+            </div>
+            <div class="edu-card glow reveal" style="--i: 1">
+              <h3>Languages</h3>
+              <p>I work, teach and build products in three languages.</p>
+              <ul class="lang-list">
+                <li><span>Somali</span><span class="lang-list__level">Native</span></li>
+                <li><span>Swahili</span><span class="lang-list__level">Professional</span></li>
+                <li><span>English</span><span class="lang-list__level">Professional</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                <!-- Odoo Contact Form Integration -->
-<script src="https://mohamed-wanaag-contact-form-test-app-rest-api-odoo-27881120.dev.odoo.com/website_crm_webhook/static/src/js/odoo_contact_widget.js" 
-        data-odoo-webhook="https://mohamed-wanaag-contact-form-test-app-rest-api-odoo-27881120.dev.odoo.com/webhook/contact?db=mohamed-wanaag-contact-form-test-app-rest-api-odoo-27881120"
-        data-auto-detect="true"></script>
-                
-                
-                
-</body>
+      <!-- Contact -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="contact reveal">
+            <p class="eyebrow">Contact</p>
+            <h2>Let's build something useful.</h2>
+            <p>
+              A data engineering role, a collaboration, or a product idea for East Africa: whatever it is, I'd love to
+              hear from you.
+            </p>
+            <div class="contact__actions">
+              <a class="btn btn--primary" href="mailto:mohamed.hassanciiro@gmail.com">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
+                mohamed.hassanciiro@gmail.com
+              </a>
+              <button class="btn btn--ghost" type="button" id="copy-email" data-email="mohamed.hassanciiro@gmail.com">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2" /><path d="M5 15V5a2 2 0 0 1 2-2h10" /></svg>
+                Copy email
+              </button>
+            </div>
+            <ul class="contact__links">
+              <li><a href="https://www.linkedin.com/in/mohamed-hiildhaxal/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://github.com/MoShaab" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="https://x.com/EngMohamedAH" target="_blank" rel="noopener">X</a></li>
+              <li><a href="images/Mohamed-Abdirizak-Hassan-CV.pdf" download>Download CV</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© <span id="year">2026</span> Mohamed Abdirizak Hassan · Built in Dadaab, Kenya</p>
+        <a href="#top" class="footer__top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
 </html>
